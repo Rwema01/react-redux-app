@@ -9,10 +9,18 @@ const Counter = () => {
 
   return (
     <div className={styles.counterContainer}>
-      <h2>Counter: {count}</h2>
-      <button onClick={() => dispatch(increment())}>+</button>
-      <button onClick={() => dispatch(decrement())}>-</button>
-      <button onClick={() => dispatch(reset())}>Reset</button>
+      <h2 className={styles.count}>Counter: {count}</h2>
+      <div className={styles.row}>
+        <button className={styles.stepButton} onClick={() => dispatch(increment())}>
+          +
+        </button>
+        <button className={styles.stepButton} onClick={() => dispatch(decrement())}>
+          -
+        </button>
+      </div>
+      <button className={styles.resetButton} onClick={() => dispatch(reset())}>
+        Reset
+      </button>
     </div>
   );
 };
